@@ -1,0 +1,27 @@
+<header>Add Website Design</header>
+<section>
+	<form name="webDesignForm">
+		<div>
+			<label>Title</label> <input type="text" id="title" ng-model="webDesignDetail.title">
+		</div>
+		<div>
+			<label>Body</label><input type="text" id="body" ng-model="webDesignDetail.body">
+		</div>
+		<div>
+			<label>Category</label>
+			<select class="select-cv"
+        style=" min-width:0px; padding-top: 6px;padding-bottom: 6px; width:50%;"
+        ng-model="selectedCategory"
+        ng-options="webCategory.category for webCategory in websiteCategories">
+      </select>
+		</div>
+		<div>
+			<label>Subject URL</label><input type="text" id="subjectUrl" ng-model="webDesignDetail.subjectUrl">
+		</div>
+		<div>
+			<button type="submit" class="button-info" ng-click="submitWebDesign()"></button>
+		</div>
+	</form>
+</section>
+<footer>
+</footer>
