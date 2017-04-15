@@ -1,0 +1,14 @@
+.design-list {
+	list-style: none;
+}
+
+.website-design-container {
+	/*border: 1px solid black;*/
+}
+
+.website-category {
+	min-width:0px;
+	padding-top: 6px;
+	padding-bottom: 6px; 
+	width:50%;
+}

@@ -1,10 +1,10 @@
 'use strict';
 var app = angular.module('addDesign', [])
 	.controller("addDesignController",function($scope, $log, $http, $modalInstance) {
-	  $log.info("modal initialized")
 	  $scope.websiteCategories = [
-	  {id: 1, category: "Lifestyle"},
-	  {id: 2, category: "video"}]
+		  {id: 1, category: "Lifestyle"},
+		  {id: 2, category: "video"}
+	  ]
 
 	  $scope.submitWebDesign = function() {
 	  	$log.info($scope.webDesignDetail)
@@ -20,5 +20,7 @@ var app = angular.module('addDesign', [])
    		})
 	  }
 
-
+	  $scope.closeForm = function() {
+    	$modalInstance.dismiss('cancel');
+	  }
  });

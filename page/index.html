@@ -3,42 +3,29 @@
   <head>
     <base href="/">
 
-    <title>BTG - Beat The Gym</title>
+    <title>Website Designs</title>
 
     <meta charset="utf-8">
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-    <meta name="copyright" content="2015 BTG. ALL RIGHTS RESERVED.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="keywords" content="btg , Beat the gym , Gym, Florida, Classes, Trainers, Excercise" >
 
-    <base href="/">
-
-    <link rel="shortcut icon" href="src/assets/images/favicon.ico">
-
-    <!-- vendor images,css, font goes here-->
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
-    
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- star rating system -->
-    <link rel="stylesheet" href="src/assets/styles/angular-busy.css">
-    <link rel="stylesheet" href="src/assets/styles/animate.css">
-
-    <!-- custom images,css, font goes here-->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/website-designs.css">
 
   </head>
 
   <body id="app" class="">
-    <div ng-controller="WebsiteDesignListingController" ng-init="fetchWebsiteDesigns()">
-      <button  ng-click="openForm()">Submit New Post</button>
-      <ul>
+    <div class="container" ng-controller="WebsiteDesignListingController" ng-init="fetchWebsiteDesigns()">
+      <h1 class="text-center">Website Designs</h1>
+      <div class="text-right">
+        <button class="btn-info"  ng-click="openForm()">Submit New Post</button>
+      </div>
+      <ul class="design-list">
         <li ng-repeat="design in webDesigns | orderBy: '-createdAt' ">
-          <div>
-            <heading>{{design.title}}</heading>
+          <div class="well">
+            <h2>{{design.title}}</h2>
             <!-- <iframe ng-src="http://emumba.com" width="100%" height="auto" frameborder="0"></iframe> -->
-            <text>{{design.body}}</text>
+            <p>{{design.body}}</p>
         </div>
         </li>
       </ul>

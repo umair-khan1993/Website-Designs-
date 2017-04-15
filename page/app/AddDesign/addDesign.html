@@ -1,27 +1,33 @@
-<header>Add Website Design</header>
-<section>
-	<form name="webDesignForm">
-		<div>
-			<label>Title</label> <input type="text" id="title" ng-model="webDesignDetail.title">
-		</div>
-		<div>
-			<label>Body</label><input type="text" id="body" ng-model="webDesignDetail.body">
-		</div>
-		<div>
-			<label>Category</label>
-			<select class="select-cv"
-        style=" min-width:0px; padding-top: 6px;padding-bottom: 6px; width:50%;"
-        ng-model="selectedCategory"
-        ng-options="webCategory.category for webCategory in websiteCategories">
-      </select>
-		</div>
-		<div>
-			<label>Subject URL</label><input type="text" id="subjectUrl" ng-model="webDesignDetail.subjectUrl">
-		</div>
-		<div>
-			<button type="submit" class="button-info" ng-click="submitWebDesign()"></button>
-		</div>
-	</form>
-</section>
-<footer>
-</footer>
+<div>
+	<h3 class="text-center">Add Website Design</h3>
+	<div class="modal-body">
+		<form name="webDesignForm">
+			<div class="form-group">
+				<label>Title</label> <input type="text" class="form-control" id="title" ng-model="webDesignDetail.title">
+			</div>
+			<div class="form-group">
+				<label>Body</label>
+				<textarea type="text" class="form-control" id="body" ng-model="webDesignDetail.body">
+				</textarea>
+			</div>
+			<div class="form-group">
+				<label>Category</label>
+				<div>
+					<select
+						class="form-control website-category"
+		        ng-model="selectedCategory"
+		        ng-options="webCategory.category for webCategory in websiteCategories">
+		      </select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Subject URL</label>
+				<input type="text" class="form-control" id="subjectUrl" ng-model="webDesignDetail.subjectUrl">
+			</div>
+			<div class="text-center">
+				<button class="btn-info" ng-click="submitWebDesign()">Submit</button>
+				<button class="btn-warning" ng-click="closeForm()">Cancel</button>
+			</div>
+		</form>
+	</div>
+</div>
