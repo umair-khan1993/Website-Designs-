@@ -19,7 +19,6 @@ sequelize
   })
   .done();
 
-//FAMILY Oject to be mapped to family table in db
 var WEBDESIGN = sequelize.define('web_design', {
   design_id: {
     type: Sequelize.INTEGER,
@@ -32,11 +31,11 @@ var WEBDESIGN = sequelize.define('web_design', {
   },
 
   body:{
-    type: Sequelize.STRING,
+    type: Sequelize.TEXT,
   },
 
   subject_url:{
-    type: Sequelize.TEXT,
+    type: Sequelize.STRING,
   },
 
   /*createdOn: {

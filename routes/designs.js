@@ -11,21 +11,20 @@ exports.fetchDesigns = function(req, res) {
     if (err) {
       console.log("error in fetching designs")
       console.log(err)
+      res.send(500)
+
     } else {
-    	console.log("fetched succesfully")
 			res.status(200).send(designs)
     }
   });
 }
 
 exports.addWebsiteDesign = function(req, res) {
-	console.log("req.body")
-	console.log(req.body)
 	var designAttributes = req.body.data;
 
 	designModel.create({
     title: designAttributes.title,
-    subject_url: designAttributes.subjectUrl,
+    subject_url: designAttributes.subject_url ? designAttributes.subject_url : null,
     body: designAttributes.body
   }).complete(function(err, design) {
     if (err) {

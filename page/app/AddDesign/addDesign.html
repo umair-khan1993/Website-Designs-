@@ -1,13 +1,14 @@
 <div>
 	<h3 class="text-center">Add Website Design</h3>
 	<div class="modal-body">
-		<form name="webDesignForm">
+		<form name="webDesignForm" ng-submit="webDesignForm.$valid && submitWebDesign()">
 			<div class="form-group">
-				<label>Title</label> <input type="text" class="form-control" id="title" ng-model="webDesignDetail.title">
+				<label>Title</label>
+				<input placeholder="Enter title" type="text" class="form-control" id="title" ng-model="webDesignDetail.title" required>
 			</div>
 			<div class="form-group">
 				<label>Body</label>
-				<textarea type="text" class="form-control" id="body" ng-model="webDesignDetail.body">
+				<textarea type="text" placeholder="Enter Details" maxlength="1000" class="form-control" id="body" ng-model="webDesignDetail.body" required>
 				</textarea>
 			</div>
 			<div class="form-group">
@@ -22,10 +23,12 @@
 			</div>
 			<div class="form-group">
 				<label>Subject URL</label>
-				<input type="text" class="form-control" id="subjectUrl" ng-model="webDesignDetail.subjectUrl">
+				<input placeholder="Enter Website URL" ng-pattern="subjectUrlRegex" type="text" class="form-control" name="subjectUrl" ng-model="webDesignDetail.subject_url">
+				<div class="text-danger" ng-show="webDesignForm.subjectUrl.$error.pattern">
+					Url must be entered in form: http://www.example.com</div>
 			</div>
 			<div class="text-center">
-				<button class="btn-info" ng-click="submitWebDesign()">Submit</button>
+				<button type="submit" class="btn-info" >Submit</button>
 				<button class="btn-warning" ng-click="closeForm()">Cancel</button>
 			</div>
 		</form>
