@@ -26,7 +26,7 @@
             <h2>{{design.title}}</h2>
             <p class="small">{{design.createdAt | date:'medium'}}</p>
             <iframe ng-if="design.subject_url" src="{{getIframeUrl(design)}}" width="100%" height="250px" frameborder="0"></iframe>
-            <p>{{design.body}}</p>
+            <p class="design-body">{{design.body}}</p>
         </div>
         </li>
       </ul>

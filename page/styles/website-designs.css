@@ -2,7 +2,9 @@
 	list-style: none;
 }
 
-.website-design-container {
+.design-body {
+	margin-top: 15px;
+	font-size: 18px;
 }
 
 .website-category {

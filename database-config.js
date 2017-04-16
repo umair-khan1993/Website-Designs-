@@ -31,11 +31,11 @@ var WEBDESIGN = sequelize.define('web_design', {
   },
 
   body:{
-    type: Sequelize.TEXT,
+    type: Sequelize.STRING (1000),
   },
 
   subject_url:{
-    type: Sequelize.STRING,
+    type: Sequelize.STRING (1000),
   },
 
   /*createdOn: {
