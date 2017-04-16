@@ -7,6 +7,11 @@
 	font-size: 18px;
 }
 
+.submit-post-button {
+	padding: 7px;
+	margin-bottom: 10px;
+}
+
 .website-category {
 	min-width:0px;
 	padding-top: 6px;

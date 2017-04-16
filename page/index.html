@@ -17,8 +17,8 @@
   <body id="app" class="">
     <div class="container" ng-controller="WebsiteDesignListingController" ng-init="fetchWebsiteDesigns()">
       <h1 class="text-center">Website Designs</h1>
-      <div class="text-right">
-        <button class="btn-info"  ng-click="openForm()">Submit New Post</button>
+      <div class="text-center">
+        <button class="btn-info submit-post-button"  ng-click="openForm()">Submit New Post</button>
       </div>
       <ul class="design-list">
         <li ng-repeat="design in webDesigns | orderBy: '-createdAt' ">
