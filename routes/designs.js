@@ -25,7 +25,8 @@ exports.addWebsiteDesign = function(req, res) {
 	designModel.create({
     title: designAttributes.title,
     subject_url: designAttributes.subject_url ? designAttributes.subject_url : null,
-    body: designAttributes.body
+    body: designAttributes.body,
+    category: designAttributes.category
   }).complete(function(err, design) {
     if (err) {
       console.log("error occured while storing design");

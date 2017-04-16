@@ -5,18 +5,10 @@ var express = require("express"),
 
 app.use(express.static("./page"));
 
-//initialization of session
-/*app.use(session({
-  secret: 'cookie_secret',
-  name: 'cookie_name',
-  proxy: true,
-  resave: true,
-  saveUninitialized: true
-}));*/
-
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
 app.use(bodyParser({
   limit: '50mb'
 }));
@@ -51,5 +43,4 @@ app.post("/add-website-design", designs.addWebsiteDesign)
 var server = app.listen(8080, function() {
   //8080 for server deployment
   console.log('running on local host port 8080');
-
 });

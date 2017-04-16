@@ -11,11 +11,11 @@ var Sequelize = require('sequelize'),
 sequelize
   .authenticate()
   .then(function() {
-    console.log('Connection to SQL DB has been established successfully.')
+    console.log('Connection to Database has been established successfully.')
   })
   .catch(function(err) {
     console.log(err);
-    console.log("SOMETHING DONE GOOFED");
+    console.log("Something went wrong. Make sure database named 'websitedesigns' has been made. If problem still persists, try restarting the server.");
   })
   .done();
 
@@ -38,9 +38,9 @@ var WEBDESIGN = sequelize.define('web_design', {
     type: Sequelize.STRING (1000),
   },
 
-  /*createdOn: {
-    type: Sequelize.DATE
-  }*/
+  category:{
+    type: Sequelize.STRING,
+  }
 }, {
   tableName: 'web_design', // this will define the table's name
   timestamps: true // this will deactivate the timestamp columns

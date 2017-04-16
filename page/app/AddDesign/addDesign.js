@@ -11,6 +11,7 @@ var app = angular.module('addDesign', [])
 	  $scope.selectedCategory = $scope.websiteCategories[0];
 
 	  $scope.submitWebDesign = function() {
+	  	$scope.webDesignDetail.category = $scope.selectedCategory.category;
 	  	$http.post("http://localhost:8080/add-website-design", {data: $scope.webDesignDetail})
 	  	.success( function(response) {
 	  		$modalInstance.close($scope.webDesignDetail)
